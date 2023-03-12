@@ -1,1 +1,3 @@
-export const createUserAccount = () => {};
+export const createUserAccount = (request, response) => {
+  response.send("recieved");
+};
