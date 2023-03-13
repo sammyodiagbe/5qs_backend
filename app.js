@@ -14,7 +14,7 @@ app.use(
   })
 );
 
-app.get("/", (request, response) => {
+app.get("/", (_, response) => {
   response.send("working like a charm 😎");
 });
 
