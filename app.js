@@ -1,5 +1,6 @@
 import express from "express";
 import dotenv from "dotenv";
+import authRouteHandler from "./routes/authRoutes.js";
 
 dotenv.config();
 
@@ -13,6 +14,8 @@ app.use(
     extended: true,
   })
 );
+
+app.use("/auth", authRouteHandler);
 
 app.get("/", (_, response) => {
   response.send("working like a charm 😎");
